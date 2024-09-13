@@ -1,1 +1,1 @@
-Test repo for checking if hosting works.
+The Hiding Secrets & Finding Secrets repository
