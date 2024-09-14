@@ -3,6 +3,10 @@ this will contain the material for the workshop.
 
 # Finding secrets, everywhere
 
+## The presentation of the  of the Hiding Secrets & Finding Secrets
+
+[Presentation slides](https://github.com/dev-vs-ciso/wts24-secrets/blob/main/WhatTheStack_Hiding%20Secrets%20%26%20Finding%20Secrets.pdf)
+
 ## Finding stuff on github that someone tried to correct
 `https://github.com/search?q=remove+api+key&type=pullrequests`
 
