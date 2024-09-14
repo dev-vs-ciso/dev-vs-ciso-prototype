@@ -22,11 +22,13 @@ find . \( ! -path "$mount_point/Windows/*" -a ! -path "$mount_point/Program File
 ```
 
 ## Finding stuff on public indexed sites
+### .git content
 `".git" intitle:"Index of"`
 `git-dumper https://website.cim/.git/ website.com`
 `gitleaks detect -v`
 
-`intitle:"Django site admin" inurl:admin -site:stackoverflow.com -site:github.com`
+### web.config
+`inurl:"web.config" & intext:"Password" & ext:config -git`
 
 ## Checking AWS key in CloudTrail: 
 CloudTrail->Event History -> search for AWS key

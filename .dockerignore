@@ -1,0 +1,54 @@
+# Ignore the .git directory
+# .git
+
+# # Ignore Dockerfile and .dockerignore if they are not needed inside the image
+# Dockerfile
+# .dockerignore
+
+# # Ignore node_modules directory (for Node.js projects)
+# node_modules
+
+# # Ignore Python cache files
+# __pycache__/
+# *.pyc
+# *.pyo
+
+# # Ignore log files
+# *.log
+
+# # Ignore OS-generated files
+# .DS_Store
+# Thumbs.db
+
+# # Ignore local environment files
+# .env
+# *.local
+
+# # Ignore editor and IDE files
+# *.swp
+# *.swo
+# .idea/
+# .vscode/
+
+# # Ignore build and dependency directories
+# /dist
+# /build
+# /target
+# *.o
+# *.obj
+
+# # Ignore sensitive files
+# *.pem
+# *.key
+
+# # Ignore temporary files
+# *.tmp
+# *.bak
+
+# # Ignore test directories or files
+# /tests
+# *.test.*
+
+# # Ignore compiled code and binaries
+# *.out
+# *.class
