@@ -1,34 +1,38 @@
 The Hiding Secrets & Finding Secrets repository
 this will contain the material for the workshop.
 
+# Finding secrets, everywhere
 
-# Finding stuff on github that someone tried to correct
+## Finding stuff on github that someone tried to correct
 `https://github.com/search?q=remove+api+key&type=pullrequests`
 
-
-# Test out docker images for leaks
+## Test out docker images for leaks
 ```
 docker build . -t mysecureapp
 docker run -t mysecureapp
 docker ps -a
 docker export (pid)  > mysecureapp.tar
-Untar
-Find ./ -name Dockerfile
+untar
+find . -name Dockerfile
+find . \( ! -path "$mount_point/Windows/*" -a ! -path "$mount_point/Program Files/*" -a ! -path "$mount_point/Program Files \(x86\)/*" \) -size -25M \
+                    \( -name ".aws" -o -name ".ssh" -o -name "credentials.xml" \
+                    -o -name "secrets.yml" -o -name "config.php" -o -name "_history" \
+                    -o -name "autologin.conf" -o -name "web.config" -o -name ".env" \
+                    -o -name ".git" \) -not -empty
 ```
 
-# Finding stuff on public index systems
+## Finding stuff on public indexed sites
 `".git" intitle:"Index of"`
 `git-dumper https://website.cim/.git/ website.com`
 `gitleaks detect -v`
 
 `intitle:"Django site admin" inurl:admin -site:stackoverflow.com -site:github.com`
 
-# Checking AWS key in CloudTrail: 
+## Checking AWS key in CloudTrail: 
 CloudTrail->Event History -> search for AWS key
 
 
 # How to protect from secrets - local pre-commit
-
 `pip install pre-commit --break-system-packages`
 
 Note: If invoking pip returns “not found”, try pip3.
