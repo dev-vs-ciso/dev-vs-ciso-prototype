@@ -26,12 +26,14 @@ find . \( ! -path "$mount_point/Windows/*" -a ! -path "$mount_point/Program File
 ```
 
 ## Finding stuff on public indexed sites
-### .git content
+### finding .git content and pulling source (with any credentials or secrets)
 `".git" intitle:"Index of"`
+
 `git-dumper https://website.cim/.git/ website.com`
+
 `gitleaks detect -v`
 
-### web.config
+### finding web.config with credentials
 `inurl:"web.config" & intext:"Password" & ext:config -git`
 
 ## Checking AWS key in CloudTrail: 
